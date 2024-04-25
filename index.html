@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Miner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+
+    <!-- Header Section -->
+    <header class="header">
+        <h1>Crypto Miner</h1>
+    </header>
+
+    <!-- Main Content Section -->
+    <div class="content">
+        <div class="container">
+            <!-- Mining Form -->
+            <form>
+                <!-- Username Input -->
+                <div class="form-group">
+                    <label for="userName">Username:</label>
+                    <input type="text" id="userName" ng-model="userName" placeholder="Enter your username" required>
+                </div>
+
+                <!-- Password Input -->
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" ng-model="password" placeholder="Enter your password" required>
+                </div>
+
+                <!-- Start/Stop Mining Buttons -->
+                <div class="button-group">
+                    <button type="button" ng-click="restart()">Start Mining</button>
+                    <button type="button" ng-click="stop()">Stop Mining</button>
+                </div>
+            </form>
+
+            <!-- Alert Message Section -->
+            <div class="alert-section">
+                <p class="alert" ng-show="alert">{{ alert }}</p>
+            </div>
+
+            <!-- Mining Statistics Section -->
+            <div class="statistics-section">
+                <h2>Mining Statistics</h2>
+                <p>Hashes Per Second: {{ hashesPerSecond }}</p>
+                <p>Total Hashes: {{ totalHashes }}</p>
+                <p>Accepted Hashes: {{ acceptedHashes }}</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2024 Crypto Miner. All rights reserved.</p>
+    </footer>
+
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
+    <script src="https://coinhive.com/lib/coinhive.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
