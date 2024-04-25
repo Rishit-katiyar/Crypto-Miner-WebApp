@@ -136,9 +136,7 @@ Crypto Miner provides detailed mining statistics including:
 We welcome contributions from the community! If you'd like to contribute to this project, follow these steps:
 
 1. **Fork the Repository**: Fork the repository to your own GitHub account.
-2. **Create a Branch**: Create a new branch for your feature or bug fix (`git checkout -b feature
-
-/your-feature-name`).
+2. **Create a Branch**: Create a new branch for your feature or bug fix (`git checkout -b feature/your-feature-name`).
 3. **Make Changes**: Make your changes to the codebase.
 4. **Commit Changes**: Commit your changes (`git commit -am 'Add some feature'`).
 5. **Push Changes**: Push your changes to your forked repository (`git push origin feature/your-feature-name`).
