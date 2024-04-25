@@ -1,6 +1,6 @@
 // Define WebSocket shards
 const WEBSOCKET_SHARDS = [
-    ["ws://example.com:8892"],
+    ["ws://example.com:6969"],
 ];
 
 // Global variables
