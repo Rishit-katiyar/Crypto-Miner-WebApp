@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Crypto Miner - A web application for cryptocurrency mining. Start mining easily with our user-friendly interface.">
+    <title>Crypto Miner</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- SEO Tags -->
+    <meta property="og:title" content="Crypto Miner">
+    <meta property="og:description" content="Start cryptocurrency mining with our user-friendly web application.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Crypto Miner">
+    <meta name="twitter:description" content="Start cryptocurrency mining with our user-friendly web application.">
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <h1>Crypto Miner</h1>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="content">
+        <div class="container">
+            <!-- Mining Form -->
+            <form>
+                <!-- Username Input -->
+                <div class="form-group">
+                    <label for="userName">Username:</label>
+                    <input type="text" id="userName" ng-model="userName" placeholder="Enter your username" required>
+                </div>
+
+                <!-- Password Input -->
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" ng-model="password" placeholder="Enter your password" required>
+                </div>
+
+                <!-- Start/Stop Mining Buttons -->
+                <div class="button-group">
+                    <button type="button" ng-click="restart()">Start Mining</button>
+                    <button type="button" ng-click="stop()">Stop Mining</button>
+                </div>
+            </form>
+
+            <!-- Alert Message Section -->
+            <div class="alert-section">
+                <p class="alert" ng-show="alert">{{ alert }}</p>
+            </div>
+
+            <!-- Mining Statistics Section -->
+            <section class="statistics-section">
+                <h2>Mining Statistics</h2>
+                <p>Hashes Per Second: {{ hashesPerSecond }}</p>
+                <p>Total Hashes: {{ totalHashes }}</p>
+                <p>Accepted Hashes: {{ acceptedHashes }}</p>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Crypto Miner. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js" defer></script>
+    <script src="https://coinhive.com/lib/coinhive.min.js" defer></script>
+
+    <!-- Custom JavaScript -->
+    <script src="app.js" defer></script>
+</body>
+</html>
